@@ -11,7 +11,7 @@ return elements in Last In First Out order.
    implementing a Stack?
 """
 
-array = ["Computer science", "Physics", "Bioengineering", "Criminalogy"]
+array = ["Computer science", "Physics", "Bioengineer", "Alternative Energy Engineer"]
 
 
 class Stack:
@@ -20,7 +20,7 @@ class Stack:
         self.storage = storage
 
     def __len__(self):
-        pass
+        return len(self.storage)
 
     def push(self, value):
         if value not in self.storage: 
@@ -29,5 +29,10 @@ class Stack:
 
     def pop(self):
         self.storage.pop()
-
         pass
+
+
+stack = Stack(array) 
+
+stack.push("Physics")
+print("Stack", stack.storage)
